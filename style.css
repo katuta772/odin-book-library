@@ -92,3 +92,22 @@ body{
     border-radius: 1rem;
     padding: 0.5rem;
 }
+
+.content-options{
+    display: flex;
+    gap: 2rem;
+}
+
+.content-options > button{
+    background-color: white;
+    color: #59a1ff ;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.content-options > button:hover{
+    background-color: rgba(128, 128, 128, 0.11);
+}
