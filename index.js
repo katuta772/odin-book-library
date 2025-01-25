@@ -41,10 +41,16 @@ function createCard(book) {
   content.appendChild(card);
 }
 
+function showBooks() {
+  content.innerHTML = "";
+  for (index = contentPage * 4 - 4; index < contentPage * 4; index++) {
+    createCard(myLibrary[index]);
+  }
+}
+
 function nextPage() {
   if (contentPage * 4 < myLibrary.length) contentPage++;
   document.getElementById("page").textContent = contentPage;
-  content.innerHTML = '';
   showBooks();
 }
 
@@ -53,15 +59,8 @@ function prevPage() {
   } else {
     contentPage--;
     document.getElementById("page").textContent = contentPage;
-    content.innerHTML = '';
     showBooks();
   }
-}
-
-function showBooks() {
-    for(index = (contentPage * 4 - 4); index <(contentPage * 4); index++){
-        createCard(myLibrary[index])
-    }
 }
 
 // Test examples
