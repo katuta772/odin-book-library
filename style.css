@@ -1,0 +1,46 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.header > img{
+    height: 6rem;
+}
+
+.header > h2{
+    color: #59a1ff;
+    background-color: blanchedalmond ;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 1rem;
+}
+
+.options{
+    display: flex;
+    gap: 2rem;
+}
+
+.options > button{
+    background-color: blanchedalmond;
+    color: #59a1ff ;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.options > button:hover{
+    background-color: rgb(253, 216, 160);
+}
+
