@@ -21,8 +21,7 @@ body{
 
 .header > h2{
     color: #59a1ff;
-    background-color: blanchedalmond ;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
     border-radius: 1rem;
 }
 
@@ -32,8 +31,9 @@ body{
 }
 
 .options > button{
-    background-color: blanchedalmond;
+    background-color: white;
     color: #59a1ff ;
+    border: 1px solid black;
     border-radius: .5rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1rem;
@@ -41,6 +41,54 @@ body{
 }
 
 .options > button:hover{
-    background-color: rgb(253, 216, 160);
+    background-color: rgba(128, 128, 128, 0.11);
 }
 
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.content >.card{
+    padding: 1rem;
+    width: 12rem;             
+    height: 8rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px gray;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 40%;
+    grid-template-areas: 
+        "Name Name"
+        "Author Author"
+        "Pages Status";
+}
+
+.card > #name{
+    grid-area: Name;
+    margin: auto;
+    font-weight: bold;
+}
+
+.card > #author{
+    grid-area: Author;
+    margin: auto;
+    font-weight: bold;
+}
+
+.card > #pages{
+    grid-area: Pages;
+    margin: auto;
+    font-size: 0.8rem;
+}
+
+.card > #status{
+    grid-area: Status;
+    margin: auto;
+    font-size: 0.8rem;
+    border: 1px solid red;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
