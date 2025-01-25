@@ -1,113 +1,114 @@
-body{
-    font-family: "Roboto", sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.container{
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
-    align-items: center;
+.container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-.header{
-    display: flex;
-    align-items: center;
+.header {
+  display: flex;
+  align-items: center;
 }
 
-.header > img{
-    height: 6rem;
+.header > img {
+  height: 6rem;
 }
 
-.header > h2{
-    color: #59a1ff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    border-radius: 1rem;
+.header > h2 {
+  color: #59a1ff;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 1rem;
 }
 
-.options{
-    display: flex;
-    gap: 2rem;
+.options {
+  display: flex;
+  gap: 2rem;
 }
 
-.options > button{
-    background-color: white;
-    color: #59a1ff ;
-    border: 1px solid black;
-    border-radius: .5rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
+.options > button {
+  background-color: white;
+  color: #59a1ff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.options > button:hover{
-    background-color: rgba(128, 128, 128, 0.11);
+.options > button:hover {
+  background-color: rgba(128, 128, 128, 0.11);
 }
 
-.content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
-.content >.card{
-    padding: 1rem;
-    width: 12rem;             
-    height: 8rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    box-shadow: 2px 2px 5px gray;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 30% 40%;
-    grid-template-areas: 
-        "Name Name"
-        "Author Author"
-        "Pages Status";
+.content > .card {
+  padding: 1rem;
+  width: 12rem;
+  height: 8rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px gray;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 30% 40%;
+  grid-template-areas:
+    "Name Name"
+    "Author Author"
+    "Pages Status";
 }
 
-.card > #name{
-    grid-area: Name;
-    margin: auto;
-    font-weight: bold;
+.card > #name {
+  grid-area: Name;
+  margin: auto;
+  font-weight: bold;
 }
 
-.card > #author{
-    grid-area: Author;
-    margin: auto;
-    font-weight: bold;
+.card > #author {
+  grid-area: Author;
+  margin: auto;
+  font-weight: bold;
 }
 
-.card > #pages{
-    grid-area: Pages;
-    margin: auto;
-    font-size: 0.8rem;
+.card > #pages {
+  grid-area: Pages;
+  margin: auto;
+  font-size: 0.8rem;
 }
 
-.card > #status{
-    grid-area: Status;
-    margin: auto;
-    font-size: 0.8rem;
-    border: 1px solid red;
-    border-radius: 1rem;
-    padding: 0.5rem;
+.card > #status {
+  grid-area: Status;
+  margin: auto;
+  font-size: 0.8rem;
+  border: 1px solid red;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-.content-options{
-    display: flex;
-    gap: 2rem;
+.content-options {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.content-options > button{
-    background-color: white;
-    color: #59a1ff ;
-    border: 1px solid black;
-    border-radius: .5rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    font-size: 0.7rem;
-    font-weight: bold;
+.content-options > button {
+  background-color: white;
+  color: #59a1ff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
-.content-options > button:hover{
-    background-color: rgba(128, 128, 128, 0.11);
+.content-options > button:hover {
+  background-color: rgba(128, 128, 128, 0.11);
 }
