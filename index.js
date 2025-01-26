@@ -26,11 +26,7 @@ function showForm() {
 }
 
 function addBookToLibrary() {
-  console.log(document.getElementById("Name").value)
-  console.log(document.getElementById("Author").value)
-  console.log(document.getElementById("Pages").value)
-  
-  if (formVisible == true && document.getElementById("Name").value != "" && document.getElementById('Author').value != '' && document.getElementById('Pages').value != '') {
+   if (formVisible == true && document.getElementById("Name").value != "" && document.getElementById('Author').value != '' && document.getElementById('Pages').value != '') {
     const formName = document.getElementById("Name");
     const formAuthor = document.getElementById("Author");
     const formPages = document.getElementById("Pages");
@@ -46,7 +42,6 @@ function addBookToLibrary() {
     console.log(document.getElementById("Author").value)
     console.log(document.getElementById("Pages").value)
     myLibrary.push(book);
-    console.log(myLibrary.length)
 
     formName.value = "";
     formAuthor.value = "";
