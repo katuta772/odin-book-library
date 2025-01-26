@@ -21,7 +21,7 @@
         <h2>Your Library</h2>
       </div>
       <div class="options">
-        <button>Add book</button>
+        <button onclick="showForm()">Add book</button>
         <div class="form">
           <div id="form-name">
             <h4>Name</h4>
@@ -35,7 +35,7 @@
             <h4>Pages</h4>
             <input type="number" id="Pages" min="1">
           </div>
-          <button id="form-submit">Submit</button>
+          <button onclick="addBookToLibrary()">Submit</button>
         </div>
       </div>
       <div class="content"></div>
