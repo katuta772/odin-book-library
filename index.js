@@ -26,7 +26,12 @@ function showForm() {
 }
 
 function addBookToLibrary() {
-   if (formVisible == true && document.getElementById("Name").value != "" && document.getElementById('Author').value != '' && document.getElementById('Pages').value != '') {
+  if (
+    formVisible == true &&
+    document.getElementById("Name").value != "" &&
+    document.getElementById("Author").value != "" &&
+    document.getElementById("Pages").value != ""
+  ) {
     const formName = document.getElementById("Name");
     const formAuthor = document.getElementById("Author");
     const formPages = document.getElementById("Pages");
@@ -38,9 +43,6 @@ function addBookToLibrary() {
       formPages.value,
       formStatus
     );
-    console.log(document.getElementById("Name").value)
-    console.log(document.getElementById("Author").value)
-    console.log(document.getElementById("Pages").value)
     myLibrary.push(book);
 
     formName.value = "";
@@ -50,9 +52,11 @@ function addBookToLibrary() {
   }
 }
 
-function createCard(book) {
+function createCard(book, index) {
   const card = document.createElement("div");
   card.classList.add("card");
+  card.id = index;
+  card.addEventListener("click", setStatus);
 
   const cardName = document.createElement("div");
   const cardAuthor = document.createElement("div");
@@ -78,8 +82,9 @@ function createCard(book) {
 
 function showBooks() {
   content.innerHTML = "";
+
   for (index = contentPage * 4 - 4; index < contentPage * 4; index++) {
-    createCard(myLibrary[index]);
+    createCard(myLibrary[index], index);
   }
 }
 
@@ -98,13 +103,24 @@ function prevPage() {
   }
 }
 
+function setStatus() {
+  for (let index = 0; index < myLibrary.length; index++) {
+    if (this.id == index && myLibrary[index].status == "Not Read") {
+      myLibrary[index].status = "Read";
+    } else if(this.id == index && myLibrary[index].status == "Read"){
+      myLibrary[index].status = "Not Read";
+    }
+  }
+  showBooks();
+}
+
 function start() {
   if (myLibrary.length == 0) {
     contentOptions.style.pointerEvents = "none";
     contentOptions.style.opacity = "0";
     form.style.pointerEvents = "none";
     form.style.opacity = "0";
-  } else if(myLibrary.length > 4){
+  } else if (myLibrary.length > 4) {
     showBooks();
     contentOptions.style.pointerEvents = "auto";
     contentOptions.style.opacity = "1";

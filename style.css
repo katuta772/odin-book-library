@@ -133,7 +133,7 @@ body {
   grid-area: Status;
   margin: auto;
   font-size: 0.8rem;
-  border: 1px solid red;
+  border: 1px solid #59a1ff;
   border-radius: 1rem;
   padding: 0.5rem;
 }
