@@ -27,10 +27,13 @@ body {
 
 .options {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
 .options > button {
+  width: fit-content;
   background-color: white;
   color: #59a1ff;
   border: 1px solid black;
@@ -41,7 +44,49 @@ body {
 }
 
 .options > button:hover {
-  background-color: rgba(128, 128, 128, 0.11);
+  background-color: rgba(128, 128, 128, 0.075);
+}
+
+.options > .form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.options > .form > div{
+  display: flex;
+  height: 1rem;
+  align-items: center;
+  
+  gap:0.5rem;
+}
+
+.options > .form > div > input{
+  border-radius: 2rem;
+  border: 0;
+  background-color: rgba(128, 128, 128, 0.171);
+  padding: 0.3rem;
+}
+
+.options > .form > div > input:focus{
+  border: 1px solid #59a1ff;
+  outline: none;
+}
+
+.options > .form > button{
+  width: fit-content;
+  background-color: white;
+  color: #59a1ff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.options > .form > button:hover{
+  background-color: rgba(128, 128, 128, 0.075);
 }
 
 .content {

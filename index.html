@@ -22,8 +22,21 @@
       </div>
       <div class="options">
         <button>Add book</button>
-        <button>Remove book</button>
-        <button onclick="showBooks()">Refresh</button>
+        <div class="form">
+          <div id="form-name">
+            <h4>Name</h4>
+            <input type="text" id="Name">
+          </div>
+          <div id="form-author">
+            <h4>Author</h4>
+            <input type="text" id="Author">
+          </div>
+          <div id="form-pages">
+            <h4>Pages</h4>
+            <input type="number" id="Pages" min="1">
+          </div>
+          <button id="form-submit">Submit</button>
+        </div>
       </div>
       <div class="content"></div>
       <div class="content-options">

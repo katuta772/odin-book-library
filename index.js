@@ -1,5 +1,6 @@
 const myLibrary = [];
 const content = document.querySelector(".content");
+const contentOptions = document.querySelector('.content-options');
 
 var contentPage = document.getElementById("page").textContent;
 
@@ -63,14 +64,23 @@ function prevPage() {
   }
 }
 
-// Test examples
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit2", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit3", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit4", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit5", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit6", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit7", "J.R.R. Tolkien", 295, "Not Read");
-addBookToLibrary("The Hobbit8", "J.R.R. Tolkien", 295, "Not Read");
+function start(){
+  if(myLibrary.length == 0){
+    contentOptions.style.pointerEvents = 'none';
+    contentOptions.style.opacity = '0';
+  } else if(myLibrary.length > 0){
+    showBooks();
+  }
+}
 
-showBooks();
+// // Test examples
+// addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit2", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit3", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit4", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit5", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit6", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit7", "J.R.R. Tolkien", 295, "Not Read");
+// addBookToLibrary("The Hobbit8", "J.R.R. Tolkien", 295, "Not Read");
+
+start();
