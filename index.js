@@ -14,13 +14,11 @@ function Book(name, author, pages, status) {
 }
 
 function showForm() {
-  if (formVisible == false) {
-    form.style.pointerEvents = "auto";
-    form.style.opacity = "1";
+  if (!formVisible) {
+    form.style.display = "flex"; // Show the form and maintain its layout style
     formVisible = true;
-  } else if (formVisible == true) {
-    form.style.pointerEvents = "none";
-    form.style.opacity = "0";
+  } else {
+    form.style.display = "none"; // Hide the form entirely
     formVisible = false;
   }
 }
@@ -116,14 +114,10 @@ function setStatus() {
 
 function start() {
   if (myLibrary.length == 0) {
-    contentOptions.style.pointerEvents = "none";
-    contentOptions.style.opacity = "0";
-    form.style.pointerEvents = "none";
-    form.style.opacity = "0";
+    contentOptions.style.display = 'none';
   } else if (myLibrary.length > 4) {
     showBooks();
-    contentOptions.style.pointerEvents = "auto";
-    contentOptions.style.opacity = "1";
+    contentOptions.style.display = 'flex';
   } else {
     showBooks();
   }
