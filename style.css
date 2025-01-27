@@ -153,8 +153,8 @@ body {
   grid-area: Delete;
   margin: auto;
   width: fit-content;
-  background-color: white;
-  color: #59a1ff;
+  background-color: rgba(255, 0, 0, 0.705);
+  color: #ffffff;
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
