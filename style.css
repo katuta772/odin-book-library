@@ -4,15 +4,23 @@ body {
 
 .container {
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  'options'
+  'content'
+  'content-options';
+  grid-template-columns: 40%;
+  grid-template-rows: 0.5fr 1fr 3fr 1fr;
+  height: 55rem;
+  justify-content: center;
   align-items: center;
 }
 
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .header > img {
@@ -92,7 +100,8 @@ body {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  margin: auto;
+  gap: 4rem;
 }
 
 .content > .card {
@@ -141,6 +150,7 @@ body {
 .content-options {
   display: none;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
