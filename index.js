@@ -42,6 +42,7 @@ function addBookToLibrary() {
       formStatus
     );
     myLibrary.push(book);
+    alert('Book has been added to your library!');
 
     formName.value = "";
     formAuthor.value = "";
