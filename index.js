@@ -62,6 +62,7 @@ function createCard(book, index) {
   const cardDelete = document.createElement('button');
 
   cardStatus.addEventListener("click", setStatus);
+  cardDelete.addEventListener('click', deleteBook);
 
   cardName.textContent = book.name;
   cardName.id = "name";
@@ -89,6 +90,17 @@ function showBooks() {
   for (index = contentPage * 4 - 4; index < contentPage * 4; index++) {
     createCard(myLibrary[index], index);
   }
+}
+
+function deleteBook() {
+  const position = this.parentElement.id;
+  for(index = 0; index < myLibrary.length; index++){
+    if(index == position){
+      myLibrary.splice(index,1);
+    }
+  }
+  alert('Book has been removed from your library!');
+  start();
 }
 
 function nextPage() {
@@ -123,6 +135,7 @@ function setStatus() {
 function start() {
   if (myLibrary.length == 0) {
     contentOptions.style.display = 'none';
+    showBooks();
   } else if (myLibrary.length > 4) {
     showBooks();
     contentOptions.style.display = 'flex';
