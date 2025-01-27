@@ -10,11 +10,8 @@ body {
     "options"
     "content"
     "content-options";
-  grid-template-columns: 40%;
   grid-template-rows: 0.5fr 1fr 3fr 1fr;
   height: 55rem;
-  justify-content: center;
-  align-items: center;
 }
 
 .header {
@@ -160,7 +157,6 @@ body {
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   font-size: 0.8rem;
-  font-weight: bold;
 }
 
 .content-options {
