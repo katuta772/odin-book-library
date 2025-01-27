@@ -54,12 +54,14 @@ function createCard(book, index) {
   const card = document.createElement("div");
   card.classList.add("card");
   card.id = index;
-  card.addEventListener("click", setStatus);
 
   const cardName = document.createElement("div");
   const cardAuthor = document.createElement("div");
   const cardPages = document.createElement("div");
   const cardStatus = document.createElement("div");
+  const cardDelete = document.createElement('button');
+
+  cardStatus.addEventListener("click", setStatus);
 
   cardName.textContent = book.name;
   cardName.id = "name";
@@ -69,11 +71,14 @@ function createCard(book, index) {
   cardPages.id = "pages";
   cardStatus.textContent = book.status;
   cardStatus.id = "status";
+  cardDelete.textContent = 'Remove'
+  cardDelete.id = "delete";
 
   card.appendChild(cardName);
   card.appendChild(cardAuthor);
   card.appendChild(cardPages);
   card.appendChild(cardStatus);
+  card.appendChild(cardDelete);
 
   content.appendChild(card);
 }
@@ -102,10 +107,13 @@ function prevPage() {
 }
 
 function setStatus() {
+  const divElement = this.parentElement;
+  console.log(divElement.id)
+  
   for (let index = 0; index < myLibrary.length; index++) {
-    if (this.id == index && myLibrary[index].status == "Not Read") {
+    if (divElement.id == index && myLibrary[index].status == "Not Read") {
       myLibrary[index].status = "Read";
-    } else if(this.id == index && myLibrary[index].status == "Read"){
+    } else if(divElement.id == index && myLibrary[index].status == "Read"){
       myLibrary[index].status = "Not Read";
     }
   }

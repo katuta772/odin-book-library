@@ -5,11 +5,11 @@ body {
 .container {
   padding: 1.5rem;
   display: grid;
-  grid-template-areas: 
-  "header"
-  'options'
-  'content'
-  'content-options';
+  grid-template-areas:
+    "header"
+    "options"
+    "content"
+    "content-options";
   grid-template-columns: 40%;
   grid-template-rows: 0.5fr 1fr 3fr 1fr;
   height: 55rem;
@@ -55,34 +55,34 @@ body {
   background-color: rgba(128, 128, 128, 0.075);
 }
 
-.options > .form{
+.options > .form {
   display: none;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.options > .form > div{
+.options > .form > div {
   display: flex;
   height: 1rem;
   align-items: center;
-  
-  gap:0.5rem;
+
+  gap: 0.5rem;
 }
 
-.options > .form > div > input{
+.options > .form > div > input {
   border-radius: 2rem;
   border: 0;
   background-color: rgba(128, 128, 128, 0.171);
   padding: 0.3rem;
 }
 
-.options > .form > div > input:focus{
+.options > .form > div > input:focus {
   border: 1px solid #59a1ff;
   outline: none;
 }
 
-.options > .form > button{
+.options > .form > button {
   width: fit-content;
   background-color: white;
   color: #59a1ff;
@@ -93,7 +93,7 @@ body {
   font-weight: bold;
 }
 
-.options > .form > button:hover{
+.options > .form > button:hover {
   background-color: rgba(128, 128, 128, 0.075);
 }
 
@@ -106,18 +106,20 @@ body {
 
 .content > .card {
   padding: 1rem;
-  width: 12rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   border: 1px solid black;
   border-radius: 1rem;
   box-shadow: 2px 2px 5px gray;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 30% 40%;
   grid-template-areas:
     "Name Name"
     "Author Author"
-    "Pages Status";
+    "Pages Status"
+    "Delete Delete";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 30% 10%;
+  
 }
 
 .card > #name {
@@ -145,6 +147,19 @@ body {
   border: 1px solid #59a1ff;
   border-radius: 1rem;
   padding: 0.5rem;
+}
+
+.card > #delete {
+  grid-area: Delete;
+  margin: auto;
+  width: fit-content;
+  background-color: white;
+  color: #59a1ff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .content-options {
