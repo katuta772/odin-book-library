@@ -15,10 +15,10 @@ function Book(name, author, pages, status) {
 
 function showForm() {
   if (!formVisible) {
-    form.style.display = "flex"; // Show the form and maintain its layout style
+    form.style.display = "flex";
     formVisible = true;
   } else {
-    form.style.display = "none"; // Hide the form entirely
+    form.style.display = "none";
     formVisible = false;
   }
 }
@@ -136,10 +136,12 @@ function setStatus() {
 function start() {
   if (myLibrary.length == 0) {
     contentOptions.style.display = 'none';
+    form.style.display = 'none'
     showBooks();
   } else if (myLibrary.length > 4) {
     showBooks();
     contentOptions.style.display = 'flex';
+    form.style.display = 'flex';
   } else {
     showBooks();
   }
