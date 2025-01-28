@@ -63,7 +63,6 @@ body {
   display: flex;
   height: 1rem;
   align-items: center;
-
   gap: 0.5rem;
 }
 
@@ -99,7 +98,8 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin: auto;
-  gap: 4rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .content > .card {
@@ -178,4 +178,190 @@ body {
 
 .content-options > button:hover {
   background-color: rgba(128, 128, 128, 0.11);
+}
+
+
+@media (max-width: 600px){
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .container {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "options"
+      "content"
+      "content-options";
+    grid-template-rows: 0.5fr 1fr 3fr 1fr;
+    height: 55rem;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header > img {
+    height: 6rem;
+  }
+  
+  .header > h2 {
+    color: #59a1ff;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .options > button {
+    width: fit-content;
+    background-color: white;
+    color: #59a1ff;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .options > button:hover {
+    background-color: rgba(128, 128, 128, 0.075);
+  }
+  
+  .options > .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .options > .form > div {
+    display: flex;
+    height: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .options > .form > div > input {
+    border-radius: 2rem;
+    border: 0;
+    background-color: rgba(128, 128, 128, 0.171);
+    padding: 0.3rem;
+  }
+  
+  .options > .form > div > input:focus {
+    border: 1px solid #59a1ff;
+    outline: none;
+  }
+  
+  .options > .form > button {
+    width: fit-content;
+    background-color: white;
+    color: #59a1ff;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .options > .form > button:hover {
+    background-color: rgba(128, 128, 128, 0.075);
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: auto;
+  }
+  
+  .content > .card {
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px gray;
+    display: grid;
+    grid-template-areas:
+      "Name Name"
+      "Author Author"
+      "Pages Status"
+      "Delete Delete";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 30% 10%;
+    
+  }
+  
+  .card > #name {
+    grid-area: Name;
+    margin: auto;
+    font-weight: bold;
+  }
+  
+  .card > #author {
+    grid-area: Author;
+    margin: auto;
+    font-weight: bold;
+  }
+  
+  .card > #pages {
+    grid-area: Pages;
+    margin: auto;
+    font-size: 0.8rem;
+  }
+  
+  .card > #status {
+    grid-area: Status;
+    margin: auto;
+    font-size: 0.8rem;
+    border: 1px solid #59a1ff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .card > #delete {
+    grid-area: Delete;
+    margin: auto;
+    width: fit-content;
+    background-color: rgba(255, 0, 0, 0.705);
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .content-options {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .content-options > button {
+    background-color: white;
+    color: #59a1ff;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  
+  .content-options > button:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+  }
+  
 }
